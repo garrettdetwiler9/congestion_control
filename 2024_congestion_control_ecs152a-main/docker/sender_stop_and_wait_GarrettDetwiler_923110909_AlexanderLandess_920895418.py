@@ -4,7 +4,7 @@ import time
 PACKET_SIZE = 1024
 SEQ_ID_SIZE = 4
 MESSAGE_SIZE = PACKET_SIZE - SEQ_ID_SIZE
-TIMEOUT = 1.0
+TIMEOUT = 0.5
 
 FILE_PATH = f"./file.mp3"
 RECEIVER_DEST = ("0.0.0.0", 5001)
@@ -128,4 +128,4 @@ def send_packets(FILE_PATH, RECEIVER_DEST):
 
 # output results
 throughput, delay, performance = send_packets(FILE_PATH, RECEIVER_DEST)
-print(f"AVG Throughput (bytes/sec): {throughput:.7f}, AVG Packet Delay (sec): {delay:.7f}, AVG Performance Metric: {performance:.7f}")
+print(f"{throughput:.7f}, {delay:.7f}, {performance:.7f}")

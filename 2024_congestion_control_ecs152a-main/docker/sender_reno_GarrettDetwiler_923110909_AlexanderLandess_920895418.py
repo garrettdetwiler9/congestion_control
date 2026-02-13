@@ -160,4 +160,4 @@ def send_packets(FILE_PATH, RECEIVER_DEST):
 
 # output
 throughput, delay, performance = send_packets(FILE_PATH, RECEIVER_DEST)
-print(f"AVG Throughput (bytes/sec): {throughput:.7f}, AVG Packet Delay (sec): {delay:.7f}, AVG Performance Metric: {performance:.7f}")
+print(f"{throughput:.7f}, {delay:.7f}, {performance:.7f}")

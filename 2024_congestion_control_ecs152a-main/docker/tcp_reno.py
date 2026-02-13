@@ -35,8 +35,8 @@ def send_packets(FILE_PATH, RECEIVER_DEST):
         next_seq_num = 0      
         
         # cwnd & ssthresh
-        cwnd = MESSAGE_SIZE * 1.0  # starts at 1 MSS 
-        ssthresh = 64000.0         # starts high
+        cwnd = MESSAGE_SIZE * 1.0  # starts at 1 pascket size 
+        ssthresh = 64 * MESSAGE_SIZE # 64 packet max size
         
         dup_ack_count = 0
         fast_recovery = False
